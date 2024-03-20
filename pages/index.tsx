@@ -11,6 +11,9 @@ const Home: NextPage = () => {
   function performSwap() {
     alert('Swap performed successfully!');
   }
+  function performApprove() {
+    alert('You have received 200 000 STRK !!! (lol)')
+  }
 
   return (
     <div className={styles.container}>
@@ -75,6 +78,9 @@ const Home: NextPage = () => {
 
             <button className="swap-button" onClick={performSwap}>
               Swap
+            </button>
+            <button className="approve-button" onClick={performApprove}>
+              Approve
             </button>
           </div>
         </div>
@@ -147,7 +153,19 @@ const Home: NextPage = () => {
           background-color: #ff7856;
           color: #fff;
           border: none;
-          border-radius: 4px;
+          border-radius: 8px;
+          padding: 12px 16px;
+          font-size: 16px;
+          font-weight: bold;
+          cursor: pointer;
+          transition: background-color 0.2s ease-in-out;
+        }
+
+        .approve-button {
+          background-color: #ff7856;
+          color: #fff;
+          border: none;
+          border-radius: 8px;
           padding: 12px 16px;
           font-size: 16px;
           font-weight: bold;
@@ -156,6 +174,9 @@ const Home: NextPage = () => {
         }
 
         .swap-button:hover {
+          background-color: #dd4563;
+        }
+        .approve-button:hover {
           background-color: #dd4563;
         }
       `}</style>
